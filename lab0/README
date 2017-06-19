@@ -1,0 +1,47 @@
+NAME: Rohan Varma
+EMAIL: rvarm1@ucla.edu
+ID: 111111111
+
+lab0.c:
+This is the C source file for this program. The program takes in four different optional commands, and copies the input file (if its given) to the output file (if its given). This happens with the use of file descriptors. First, the input file is open()ed, assigning it the lowest available file descriptor. Then file descriptor 1 is closed, essentially freeing up stdin. Then, dup() is passed in the file descriptor that the input file had, essentially making file descriptor 1 an alias for the one the input file was given. A similar procedure happens, but with file descriptor 2, if the output file is specified. Then, using the read() and write() calls, bytes are read from fd1 and written to fd2. There is also the option to cause a segfault in the program with the --segfault option, and the option to register a signal handler for this with the --catch option. The getopt-long API is used to do argument parsing. If the program encounters an error, a message is printed and we exit with the relevant exit code as defined by the spec. 
+
+Makefile:
+The Makefile contains the following targets: 
+	default: compiles the C source code with the -g option for debugging and creates an executable lab0
+
+	clean: Removes the tarball, executable, and any other .txt or .o files.
+
+	dist: This target creates the submission tarball, that contains the source file, makefile, readme, and 2 images
+
+	check: This target runs several smoke tests to test the program. The following tests were included:
+
+		badArgTest: This tests if the program exits with the right exit code (as defined by the spec) if an invalid argument is passed in
+
+		catchSegTest: This tests if the program exits with the right exit code if a segfault is caught (using the options --segfault and --catch)
+
+		outMatchesIn: This tests if the program indeed copies the input file to an output file correctly, by comparing the two files.
+
+		successExitTest: This tests if the program exits with the correct exit code if it executes successfully. 
+
+		openErrorTest: This tests if the program exits with the correct exit code if it cannot open the input file (done by giving it a nonexistant file "dne.txt".
+
+		creatErrorTest: This tests if the program exits with the correct exit code if it cannot creat the file given by the --output option, for example if we don't have the relevant permissions.
+
+README:
+	The README contains information about the project and each of the files, as well as sources used for confusing points.
+	
+
+backtrace.png:
+	This image is a screenshot showing the backtrace of a segfaullt in gdb. I put the seg fault causing code in another subroutine, making the trace a little more interesting.
+
+nullptr.png:
+	This iamge is a screenshot showing the verification of the null pointer as being null. This was done by setting a break point at line 28 and running --segfault in gdb. It then breaks at that line, where we can use gdp to print out relevant info. 
+
+Sources used:
+	To understand errno and strerror: http://www.tutorialspoint.com/ansi_c/c_strerror.htm
+	Opening and closing files tutorial: https://www.gnu.org/software/libc/manual/html_node/Opening-and-Closing-Files.html
+	To understand makefiles: http://www.cs.cmu.edu/~gkesden/412-18/fall01/projects/proj1/make/makeintro.html
+	Man pages for getopt_long: http://man7.org/linux/man-pages/man3/getopt.3.html
+	
+
+

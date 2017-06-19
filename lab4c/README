@@ -1,0 +1,20 @@
+NAME: Rohan Varma
+EMAIL: rvarm1@ucla.edu
+ID: 111111111
+
+This submission contains:
+
+lab4c_tcp.c: A program that extends lab 4b's temperature polling and command processing to connect to and receive commands from a tcp server. A port number and hostname should be specified to connect to it. The program also takes a 9 digit id which it immediately reports to the server. It also sends temperature reports to the server, and also processes commands from the server. 
+
+lab4c_tls.c: A program that is very similar to lab4c_tcp.c, but establishes an SSL connection instead of a tcp connection. The functionality is the same as the tcp program, but the SSL library is used in order to create an SSL connection and in addition the file descriptor for SSL must be set to the socket file descriptor. 
+
+Makefile: Contains default, clean, and dist targets. Also a check target that runs the servers and then does the sanity check.
+
+README: Describes the files included in the submission
+
+Sources:
+
+https://linux.die.net/man/3/localtime for time related functions
+http://fm4dd.com/openssl/sslconnect.htm for ssl tutorial
+
+Note: This project is pretty hacky and the argument parsing is not very robust, but it passes the sanity check and the outputs from the servers look okay, and I have a final tomorrow so I'm okay with it. 

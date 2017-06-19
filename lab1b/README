@@ -1,0 +1,21 @@
+NAME: Rohan Varma
+EMAIL: rvarm1@ucla.edu
+ID: 111111111
+** 1 SLIP DAY USED **
+
+lab1b-client.c:
+- This source file contains the implementation of the client that connects to a server using a socket. Poll is used to listen activity from the socket or from STDIN. There are also options for encryption (with twofish algorithm) and logging the sent/received bytes.
+
+lab1b-client.c:
+- This source file contains the implementation of the server that accepts connections from clients via a socket. Poll is used to listen for activity on the socket or from a pipe that is connected to a shell, similar to in lab1a. The output from the shell is written to the socket (encrypted if the option is given). 
+
+Makefile:
+- This file includes targets for building the tarball, cleaning, and compiling the executables. 
+
+README:
+- This file describes the contents of the project .
+
+Sources: 
+Tutorialspoint socket tutorial: https://www.tutorialspoint.com/unix_sockets/
+libmcrypt: http://mcrypt.hellug.gr/lib/mcrypt.3.html
+

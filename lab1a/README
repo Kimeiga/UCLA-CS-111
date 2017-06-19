@@ -1,0 +1,22 @@
+NAME: Rohan Varma
+EMAIL: rvarm1@ucla.edu
+ID: 111111111
+
+** 1 SLIP DAY USED ** 
+lab1a.c:
+	- This file contains the source code for lab1a. The program takes an optional --shell command and puts the terminal into non-canonical mode. With the --shell command, fork() is used to create a process where exec() is called to run the program /bin/bash. poll() is used to wait for some event (like a file descriptor having input) and then if an event has happened, we then read from the file descriptor. Errors are handled using errno and strerror(). At the end of the shell session, waitpid() is called to await the process's completion after which the shell exit status is printed. 
+
+Makefile:
+	The Makefile contains default, clean, and dist targets.
+	default: compiles the C source code with the -g option for debugging and creates an executable lab1a
+	clean: Removes the tarball, executable, and any other .o files
+	dist: This target creates the submission tarball, that contains the source file, makefile, and readme
+
+README:
+	The README contains information about the project and each of the files, as well as sources used for confusing points.
+
+Sources used: 
+- Linux man pages on poll(): http://man7.org/linux/man-pages/man2/poll.2.html
+- Opengroup page on close(): http://pubs.opengroup.org/onlinepubs/009695399/functions/close.html
+- Opengrou page on dup2(): http://pubs.opengroup.org/onlinepubs/009695399/functions/dup2.html
+- TLDP tutorial on pipes in C: http://tldp.org/LDP/lpg/node11.html

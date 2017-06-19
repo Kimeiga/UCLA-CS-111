@@ -1,0 +1,17 @@
+NAME: Ritam Sarmah, Rohan Varma
+EMAIL: rsarmah@ucla.edu, rvarm1@ucla.edu
+
+Slip days used: 3 from Ritam Sarmah, 1 from Rohan Varma
+
+Descriptions of included files:
+
+lab3b.py: Python module that implements functions to scan a CSV of a filesystem summary. The module runs block consistency audits, inode allocation audits, and directory consistency audits.
+
+Makefile: Contains the standard default target that copies the .py code into a file lab3b so it can be run with ./lab3b, as well as clean and dist commands.
+
+README: Contains information about the assignment and files included in the submission.
+
+Testing Approach: 
+
+- We tested primarily using the sanity check, which had 22 test cases. 
+- We also tested by making our own corrupted CSVs (ie, changing the CSV outputs from lab3a) and seeing if our lab3b output matches what we expected. 

@@ -1,0 +1,15 @@
+NAME: Rohan Varma
+EMAIL: rvarm1@ucla.du
+ID: 111111111
+
+This submission contains: 
+lab4b.c - Source code for a program that builds and runs on the Edison. It uses the mraa library to poll the temperature sensor and a button (the button for shutting the program down). It generates temperature reports, and responds to several commands to manipulate/log the program's output. 
+Makefile - the Makefile contains build (default), clean, dist, and check targets. The check target implements a few simple smoke tests to verify the program output. 
+README - Describes files & sources used
+
+ssumptions made: 
+- For specifying and modifying the period, the program prints a message and exits if the specified interval is < 0, outside of the range of L0NG_MAX, or otherwise invalid. 0 is an acceptable command in my program. 
+- Invalid commands cause the program to fail, with nothing outputted to stdout, but with an Invalid command: x message logged. 
+- SHUTDOWN messages are only logged, not printed to stdout (this was clarified in piazza)
+
+

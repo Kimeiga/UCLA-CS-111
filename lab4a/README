@@ -1,0 +1,14 @@
+NAME: Rohan Varma
+EMAIL: rvarm1@ucla.edu
+ID: 111111111
+
+serial: FZEDA625D01ZAR501
+MAC: fc:db:b3:9f:dc:80
+The tarball contains the following files:
+selfie.png: A picture of me and my edison
+ifconfig.png: the output of ifconfig, also shows name & wifi configured
+scp.png: a screenshot showing a successful scp of a c file to the edison
+helloedison.png: a screenshot of a successful build and run in an edison session
+gitclone.png: a screenshot that shows git was installed, and a successful clone of a git repo and the repo listing.
+README: contains information about edison and file descriptions. 
+

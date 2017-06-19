@@ -1,0 +1,18 @@
+NAME: Ritam Sarmah, Rohan Varma
+EMAIL: rsarmah@ucla.edu, rvarm1@ucla.edu
+
+
+** 1 slip day used, Ritam Sarmah's **
+
+# Description of files
+lab3a.c - This file implements traversing, reading, and summarizing a filesystem image. It compiles to an executable lab3a. It takes in a single .img argument (fileystem image) and reads it (returning an error if the file cannot be opened). The superblock, followed by the groups and the block and inode bitmaps are scanned. Next the inodes are scanned. If a directory is found, then the directory is scanned and summarized as well. Regardless of whether the file type was a directory or not, we stil do indirect scanning (singly, doubly, and triply indirect blocks).
+
+Makefile - The Makefile implements the default target that builds the program, the clean that removes program output and the tar.gz file, and the dist that builds the submission tarball
+
+README - This file describes the files in the submission and references used. 
+
+# References
+https://www.cs.montana.edu/courses/309/topics/4-disks/debugfs_example.html
+http://cs.smith.edu/~nhowe/262/oldlabs/ext2.html
+https://www.win.tue.nl/~aeb/linux/fs/ext2/ext2.html
+http://www.nongnu.org/ext2-doc/ext2.html
